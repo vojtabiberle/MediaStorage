@@ -1,0 +1,13 @@
+{control filterForm}
+{snippet gridMediaFiles}
+    {if !empty($files)}
+        {foreach $files as $file}
+            {control cardView $file}
+        {/foreach}
+    {else}
+        {* na tenhle div ceka javascript *}
+        <div class="mediastorage-frame"></div>
+        {*TODO: translator {_'Files not found.'}*}
+        Files not found.
+    {/if}
+{/snippet}

@@ -1,0 +1,16 @@
+{
+  "name": "vojtabiberle/MediaStorage",
+  "description": "Universal implementation of MediaStorage",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vojtěch Biberle",
+      "email": "vojtech.biberle@gmail.com"
+    },
+    {
+      "name": "Michal Hlávka",
+      "email": "michal.hlavka@bigideas.center"
+    }
+  ]
+}

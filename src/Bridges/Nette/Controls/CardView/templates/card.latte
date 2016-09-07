@@ -1,0 +1,30 @@
+<div class="card-container">
+    <div class="mediastorage-frame" title="{$file->getName()}">
+        <div class="overlay">
+            <span
+                data-mediastorage-uid="{$file->getUID()}"
+                data-mediastorage-name="{$file->getName()}"
+                data-mediastorage-url="{img name => $file, size => size-grid-thumbnail}"
+                data-mediastorage-full-url="{img name => $file}"
+                class="glyphicon glyphicon-ok"></span>
+            <span
+                data-mediastorage-remove-url="{plink :MediaStorage:Media:delete $file->getUID()}"
+                class="glyphicon glyphicon-trash"></span>
+        </div>
+        <div class="content">
+            {if $file->isImage()}
+                {include image_card.latte}
+            {else}
+                {include file_card.latte}
+            {/if}
+        </div>
+        <div class="footer">
+            {if $file->isImage()}
+                <a n:img="name => $file">{$file->getName()}</a>
+            {else}
+                <a n:file="name => $file">{$file->getName()}</a>
+            {/if}
+        </div>
+        {*<a n:href=":MediaStorage:Media:delete $file->getUID()">Delete</a>*}
+    </div>
+</div>
