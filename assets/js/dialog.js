@@ -19,13 +19,13 @@ var Dialog = Dialog || {};
         '<div class="card-container">' +
             '<div class="mediastorage-frame" data-toggle="tooltip" title="{{$fileName}}">' +
                 '<div class="overlay">' +
-                    '<span' +
+                    '<span ' +
                         'data-mediastorage-uid="{{$fileUID}}"' +
                         'data-mediastorage-name="{{$fileName}}"' +
                         'data-mediastorage-url="{{$fileLink}}"' +
                         'data-mediastorage-full-url="{{$fileFullLink}}"' +
                         'class="glyphicon glyphicon-ok"></span>' +
-                    '<span' +
+                    '<span ' +
                         'data-mediastorage-remove-url="{{$fileDeleteLink}}"' +
                         'class="glyphicon glyphicon-trash"></span>' +
                 '</div>' +
@@ -280,7 +280,7 @@ var Dialog = Dialog || {};
                             ),
                             'success'
                         );
-
+                        
                         var card = Dialog.translate(
                             Dialog.settings.cardTemplate,
                             [

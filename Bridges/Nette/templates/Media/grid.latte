@@ -1,0 +1,26 @@
+{block media-content}
+    <div id="mediastorage-dialog-container">
+        <div id="mediastorage-navigation">
+            <ol class="breadcrumb">
+                <li><strong>MediaStorage</strong></li>
+                <li id="namescape">Namescape of gallery</li>
+            </ol>
+        </div>
+        <div id="mediastorage-error-container">
+            <p id="error-type"></p>
+        </div>
+
+        <div id="mediastorage-gallery">
+            <div class="col-xs-9 no-gutter" id="mediastorage-gallery-list">
+                {control gridMediaViewControl}
+            </div>
+
+            <div class="col-xs-3" id="mediastorage-upload-form">
+                drop files here
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        Dialog.init();
+    </script>
+{/block}

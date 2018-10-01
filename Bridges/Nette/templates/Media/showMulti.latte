@@ -1,0 +1,24 @@
+{block media-content}
+makro:img:
+{showMultipleMedia 'mediastorage/test/multi as $file'}
+    {if $file->isImage()}
+        <img n:img="name => $file, size => 'size-grid-thumbnail'" />
+    {else}
+        <img n:fileIcon="name => $file->getIconName(), size => 'size-grid-thumbnail'" />
+    {/if}
+{/showMultipleMedia}
+makro:a:
+{showMultipleMedia 'mediastorage/test/multi as $file'}
+    {if $file->isImage()}
+        <a n:img="name => $file, size => 'size-grid-thumbnail'">{$file->getName()}</a>
+    {else}
+        <a n:file="name => $file, size => 'size-grid-thumbnail'">{$file->getName()}</a>
+    {/if}
+{/showMultipleMedia}
+<hr>
+n:makro:img:
+<img n:showMultipleMedia="mediastorage/test/multi, size => 'size-grid-thumbnail'" />
+<br>
+n:makro:a:
+<a n:showMultipleMedia="'mediastorage/test/multi as $file', size => 'size-grid-thumbnail'">{$file->getName()}</a>
+{/block}

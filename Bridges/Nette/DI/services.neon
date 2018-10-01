@@ -1,0 +1,11 @@
+services:
+    uploadFormFactory:
+        factory: vojtabiberle\MediaStorage\Bridges\Nette\Forms\UploadFormFactory
+        autowired: no
+    multiuploadFormFactory:
+        factory: vojtabiberle\MediaStorage\Bridges\Nette\Forms\MultiuploadFormFactory
+        autowired: no
+    uploadControl:
+        factory: vojtabiberle\MediaStorage\Bridges\Nette\Controls\Upload\UploadControlFactory
+    routerFactory:
+        factory: vojtabiberle\MediaStorage\Bridges\Nette\Router\Factory::createRouter(%router%)
